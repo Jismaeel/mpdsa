@@ -1,8 +1,15 @@
 {
-  "devDependencies": {
+  "scripts": {
+    "compile:css": "npx tailwindcss -i css/main.css -o deploy/css/main.css",
+    "minify:css": "minify deploy/css/main.css > docs/main.min.css",
+    "build:css": "npm run compile:css && npm run minify:css"
+  },
+  
+"devDependencies": {
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "minify": "^11.0.1",
     "tw-elements": "^1.1.0"
   }
 }
