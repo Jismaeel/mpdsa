@@ -3,26 +3,311 @@
 
 <head>
 
-    <title>The Mitchells Plain Driving School Association</title>
+  <title>The Mitchells Plain Driving School Association</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="The Mitchells Plain Driving School Association">
-    <meta name="author" content="The Mitchells Plain Driving School Association">
-    <link rel="stylesheet" href="main.min.css"> <!-- Link to your Tailwind CSS file -->
-    <link rel="stylesheet" href="./js/infolder css.css">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="The Mitchells Plain Driving School Association">
+  <meta name="author" content="The Mitchells Plain Driving School Association">
+  <link rel="stylesheet" href="main.min.css"> <!-- Link to your Tailwind CSS file -->
+  <link rel="stylesheet" href="./js/infolder css.css">
 
 </head>
 
 <body>
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="./img/bg video.mp4" type="video/mp4">
-        </video>
-    </div>
+  <!-- Section: Design Block -->
+  <section class="background-radial-gradient overflow-hidden">
+    
+    <!-- Navbar -->
+    <nav
+      class="relative flex w-full items-center justify-between bg-white px-4 drop-shadow-2xl shadow-black lg:flex-wrap lg:justify-start"
+      data-te-navbar-ref>
+      <!-- Container wrapper -->
+      <div class="flex w-full flex-wrap items-center justify-between px-6">
+        <div class="flex items-center">
+          <!-- Toggle button -->
+          <button
+            class="block border-0 bg-transparent py-2 pr-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+            type="button" data-te-collapse-init data-te-target="#navbarSupportedContentY"
+            aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="[&>svg]:w-7">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                <path fill-rule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
 
-    <h1 class="mt-4 mx-4 top-left-0 text-white text-bold text-6xl">
-        Resevered for The Mitchells Plain Driving School Association
-    </h1>
+          <!-- Navbar Brand -->
+          <a class="hidden lg:block" href="#!">
+            <img class="h-auto w-28" src="./img/mpddsa-02 1.png">
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="!visible hidden flex-grow basis-[100%] items-center justify-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContentY" data-te-collapse-item>
+          <!-- Middle links -->
+          <ul class="lg:flex lg:flex-row" data-te-navbar-nav-ref>
+            <li data-te-nav-item-ref>
+              <a class="block py-2 pr-2 font-bold text-black transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
+                href="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light" disabled>About us</a>
+            </li>
+            <li data-te-nav-item-ref>
+              <a class="block py-2 pr-2 font-bold text-black transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
+                href="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">Dashboard</a>
+            </li>
+            <li class="mb-2 lg:mb-0" data-te-nav-item-ref>
+              <a class="block py-2 pr-2 font-bold text-black transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
+                href="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">Lessons</a>
+            </li>
+          </ul>
+          <!-- Middle links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="my-1 flex items-center lg:my-0 lg:ml-auto">
+          <button type="button"
+            class="inline-block rounded bg-black p-4 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init data-te-ripple-color="light">
+            Contact us
+          </button>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div class="px-6 pt-4 pb-6 text-center md:px-12 lg:py-12 lg:text-left">
+      <div class="w-100 mx-auto text-neutral-800 sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
+        <div class="grid items-center lg:grid-cols-2">
+          <div class="pl-[30px] lg:mt-0 gap-6">
+            <h1 class="mt-0 mb-6 text-3xl font-bold md:text-6xl xl:text-5xl text-black">
+              Welcome to The Mitchells Plain Driving School Association
+            </h1>
+             <button type="button"
+              class="inline-block rounded border-2 bg-black p-4 text-xs font-bold drop-shadow-lg uppercase leading-normal text-white transition duration-150 ease-in-out  hover:bg-neutral-700 hover:text-white focus:border-neutral-800 focus:bg-black focus:text-white focus:outline-none focus:ring-0 active:border-primary-700 active:text-white motion-reduce:transition-none"
+              data-twe-ripple-init>
+              Get Started
+            </button>
+            <button type="button"
+              class="inline-block rounded border-2 border-red-600 p-4 text-xs font-bold drop-shadow-lg uppercase leading-normal text-red-600 transition duration-150 ease-in-out hover:border-red-400 hover:bg-red-500 hover:text-white focus:border-red-600 focus:bg-red-600 focus:text-red-500 focus:outline-none focus:ring-0 active:border-red-600 active:text-red-600 motion-reduce:transition-none"
+              data-twe-ripple-init>
+              Learn more
+            </button>
+          </div>
+          
+          <div class="relative mb-12 lg:mb-0 ">
+            <div id="radius-shape-1" class="absolute rounded-full shadow-lg"></div>
+            <div id="radius-shape-2" class="absolute shadow-lg"></div>
+            <div
+              class="relative bg-neutral-300 backdrop-blur-[25px] backdrop-saturate-[200%] block rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:px-12">
+              <form>
+                <div class="grid md:grid-cols-2 md:gap-6">
+                  <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none r:text-neutral-200 r:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleFormControlInput1" placeholder="First name" />
+                    <label for="exampleFormControlInput1"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none r:text-neutral-200 r:peer-focus:text-primary">First
+                      name
+                    </label>
+                  </div>
+                  <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none r:text-neutral-200 r:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleFormControlInput2" placeholder="Last name" />
+                    <label for="exampleFormControlInput2"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none r:text-neutral-200 r:peer-focus:text-primary">Last
+                      name
+                    </label>
+                  </div>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                  <input type="email"
+                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none r:text-neutral-200 r:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput3" placeholder="Email address" />
+                  <label for="exampleFormControlInput3"
+                    class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none r:text-neutral-200 r:peer-focus:text-primary">Email
+                    address
+                  </label>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                  <input type="password"
+                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none r:text-neutral-200 r:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput4" placeholder="Password" />
+                  <label for="exampleFormControlInput4"
+                    class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none r:text-neutral-200 r:peer-focus:text-primary">Password
+                  </label>
+                </div>
+                <div class="mb-6 flex min-h-[1.5rem] justify-center pl-[1.5rem]">
+                  <input
+                    class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent r:border-neutral-600 r:checked:border-primary r:checked:bg-primary r:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] r:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                    type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="inline-block pl-[0.15rem] hover:cursor-pointer r:text-neutral-50"
+                    for="flexCheckChecked">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+                <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                  class="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] r:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] r:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] r:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] r:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                  Sign up
+                </button>
+                <div class="flex justify-center">
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 r:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 r:text-primary-400 r:hover:text-primary-500 r:focus:text-primary-500">
+                    <!-- Facebook -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 r:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 r:text-primary-400 r:hover:text-primary-500 r:focus:text-primary-500">
+                    <!-- Google -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path fill="currentColor"
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 r:text-primary-400 r:hover:text-primary-500 r:focus:text-primary-500">
+                    <!-- Twitter -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 r:text-primary-400 r:hover:text-primary-500 r:focus:text-primary-500">
+                    <!-- Github -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+  <section>
+    <!-- logo display -->
+    <div class="p-12 bg-black">
+        <div class="grid grid-cols-3 gap-6 lg:grid-cols-6 lg:gap-20 mx-auto items-center">
+          <a class="w-32 h-auto">
+            <img src="./img/sd trans.png">
+          </a>
+          <a class="w-32 h-auto">
+            <img src="./img/ebaneezar.png">
+          </a>
+          <a class="w-32 h-auto">
+            <img src="./img/eddies ds.png">
+          </a>
+          <a class="w-32 h-auto">
+            <img src="./img/lilies.png">
+          </a>
+          <a class="w-32 h-auto">
+            <img src="./img/craig ds.png">
+          </a>
+          <a class="w-32 h-auto">
+            <img src="./img/qs ds.png">
+          </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Container for demo purpose -->
+<div class="">
+  <!-- Section: Design Block -->
+  <section class="mb-32">
+    <div
+      class="block shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-neutral-700">
+      <div class="flex flex-wrap items-center">
+        <div class="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+          <img src="https://mdbcdn.b-cdn.net/img/new/ecommerce/vertical/088.jpg" alt="Trendy Pants and Shoes"
+            class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" />
+        </div>
+        <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+          <div class="px-6 py-12 md:px-12">
+            <h2 class="mb-4 text-2xl font-bold text-white">
+              About Mitchells Plain Driving School Association
+            </h2>
+            <p class="mb-6 flex items-center font-bold uppercase text-danger dark:text-danger-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="mr-2 h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+              </svg>
+              Get to know The Mitchells Plain Driving School Association
+            </p>
+            <p class="mb-6 text-white">
+              Welcome to Mitchells Plain Driving School Association, your trusted partner in safe and confident driving. Established with a commitment to excellence and safety, we have been serving the Mitchells Plain community and beyond for 8 years
+            </p>
+            <p class="text-white">
+              At Mitchells Plain Driving School Association, we believe that learning to drive is more than just acquiring a skill; it's about fostering responsible habits and instilling confidence behind the wheel. Our team of experienced instructors is dedicated to providing comprehensive training tailored to the individual needs of each student
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</div>
+<!-- Container for demo purpose -->
+
+
+<div class="container my-24 mx-auto md:px-6">
+  <!-- why choose us -->
+  <section class="mb-32">
+    <div class="flex flex-wrap">
+      <div class="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12">
+        <div class="flex lg:py-12">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/people/033.jpg"
+            class="w-full rounded-lg shadow-lg dark:shadow-black/20 lg:ml-[50px] z-[10]" alt="image" />
+        </div>
+      </div>
+      <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+        <div class="flex h-full items-center rounded-lg bg-black p-6 text-center text-white lg:pl-12 lg:text-left">
+          <div class="lg:pl-12">
+            <h2 class="mb-6 text-3xl font-bold text-red-700">
+              Why Choose Us?
+            </h2>
+            <p class="mb-6 pb-2 lg:pb-0 ">
+              Experienced Instructors: Our instructors are highly qualified and certified professionals with years of experience in driver education. They are dedicated to providing patient, personalized instruction to help every student succeed.
+
+              Comprehensive Curriculum: We offer a comprehensive curriculum that covers all aspects of safe driving, from basic vehicle operation to advanced defensive driving techniques. Our lessons are designed to prepare students for success on the road and in their driving exams.            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</div>
+<!-- Container for demo purpose -->
+
+  
 
 
 </body>
