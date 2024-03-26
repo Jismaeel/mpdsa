@@ -21,12 +21,15 @@
 
 </head>
 
-<body>
+<body class="flex items-center justify-center min-h-screen bg-white">
+
+  <div id="spinner" class="inline-block h-20 w-20" role="status">
+    <img src="./img/mpddsa-02 1.png" class="animate-ping">
+  </div>
   
 
-  <!-- Section: Design Block -->
-  <section class="background-radial-gradient overflow-hidden">
-
+  
+  <div id="content" class="flex-grow basis-auto hidden">
     <!-- Navbar -->
     <nav
       class="relative flex w-full items-center justify-between py-4 lg:py-2 bg-white px-4 drop-shadow-2xl shadow-black lg:flex-wrap lg:justify-start"
@@ -80,7 +83,7 @@
         <div class="my-1 flex items-center lg:my-0 lg:ml-auto">
           <a type="button"
             href="#Contactus"
-            class="inline-block rounded rounded-full bg-black p-4 text-xs font-medium uppercase leading-normal text-white drop-shadow-2xl shadow-black transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+            class="inline-block rounded rounded-full bg-black p-4 text-xs font-medium uppercase leading-normal text-white drop-shadow-lg shadow-black transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
             Contact us
         </a>
         </div>
@@ -105,7 +108,7 @@
               Get Started
           </a>
             <a
-              class="inline-block p-4 text-xs font-bold drop-shadow-lg uppercase leading-normal text-red-800 transition duration-150 ease-in-out hover:text-red-600 focus:border-red-600 focus:text-red-500 focus:outline-none focus:ring-0 active:text-red-600 motion-reduce:transition-none"
+              class="inline-block p-4 text-xs font-bold drop-shadow-lg uppercase leading-normal text-red-700 transition duration-150 ease-in-out hover:text-red-600 focus:border-red-600 focus:text-red-500 focus:outline-none focus:ring-0 active:text-red-600 motion-reduce:transition-none"
               data-twe-ripple-init
               href="#whychooseus">
               Learn more
@@ -213,8 +216,6 @@
       </div>
     </div>
     <!-- Jumbotron -->
-  </section>
-  <!-- Section: Design Block -->
 
   <section>
     <!-- logo display -->
@@ -592,7 +593,6 @@
   </div>
   </section>
   <!-- Section: Design Block -->
-  </div>
   <!-- Container for demo purpose -->
           <!-- Footer -->
           <footer id="#section2" class="bg-black font-mono text-white py-4">
@@ -632,7 +632,8 @@
                   class="flex mx-auto justify-center" />
             </div>
           </footer>
-      </div>
+        </div>
+    
   
 
 
