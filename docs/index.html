@@ -37,14 +37,14 @@
       data-te-navbar-ref>
       <!-- Container wrapper -->
       <div class="flex w-full flex-wrap items-center justify-between px-6">
-        <div class="flex items-center">
+        <div class="flex gap-52 items-center">
           <!-- Toggle button -->
           <button
             class="block border-0 bg-transparent py-2 pr-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
             type="button" data-te-collapse-init data-te-target="#navbarSupportedContentY"
             aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
             <span class="[&>svg]:w-7">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-7 w-7">
                 <path fill-rule="evenodd"
                   d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
                   clip-rule="evenodd" />
@@ -53,18 +53,18 @@
           </button>
 
           <!-- Navbar Brand -->
-          <a class="hidden lg:block" href="#!">
+          <a class="lg:block " href="#!">
             <img class="h-auto w-20" src="./img/mpddsa-02 1.png">
           </a>
         </div>
 
         <!-- Collapsible wrapper -->
-        <div class="!visible hidden flex-grow basis-[100%] mr-10 items-center justify-end lg:!flex lg:basis-auto"
+        <div class="!visible hidden gap-5 flex-grow basis-[100%] items-center justify-end lg:!flex lg:basis-auto"
           id="navbarSupportedContentY" data-te-collapse-item >
           <!-- Middle links -->
-          <ul class="lg:flex lg:flex-row" data-te-navbar-nav-ref>
+          <ul class="lg:flex lg:flex-row justify-evenly" data-te-navbar-nav-ref>
             <li data-te-nav-item-ref>
-              <a class="block py-2 pr-2 font-bold text-white transition duration-150 ease-in-out hover:text-red-400 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
+              <a class="block pointer-events-none py-2 pr-2 font-bold text-white transition duration-150 ease-in-out hover:text-red-400 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
                 href="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">Dashboard</a>
             </li>
             <li data-te-nav-item-ref >
@@ -76,22 +76,22 @@
               <a class="block py-2 pr-2 font-bold text-white transition duration-150 ease-in-out hover:text-red-400 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
                 href="#DrivingSchools" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">Lessons</a>
             </li>
-            <li class="mb-2 lg:mb-0" data-te-nav-item-ref>
-              <a class="pointer-events-none block py-2 pr-2 font-bold text-white transition duration-150 ease-in-out hover:text-red-400 focus:text-neutral-600 disabled:text-black/30 r:text-neutral-200 r:hover:text-neutral-300 r:focus:text-neutral-300 r:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 r:[&.active]:text-white/80"
-                href="#DrivingSchools" data-te-nav-link-ref data-te-ripple-init
-                data-te-ripple-color="light">Membership</a>
-            </li>
           </ul>
-          <!-- Middle links -->
-        </div><!-- Right elements -->
-
-        <div class="my-1 flex items-center lg:my-0 lg:ml-auto">
+            <ul class="lg:flex lg:flex-row">
+            <li class="mb-2 lg:mb-0 mr-3" data-te-nav-item-ref>
+              <a type="button" href="#Contactus"
+            class="pointer-events-none inline-block rounded-full text-white bg-transparent border-2  p-4 text-xs font-bold uppercase leading-normal drop-shadow-lg shadow-black transition duration-150 ease-in-out hover:text-white hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+            Membership
+          </a>
+            </li>
+        <li class="my-1 flex items-center lg:my-0 lg:ml-auto">
           <a type="button" href="#Contactus"
             class="inline-block rounded-full bg-white p-4 text-xs font-bold uppercase leading-normal text-black drop-shadow-lg shadow-black transition duration-150 ease-in-out hover:text-white hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
             Contact us
           </a>
-        </div>
-        <!-- Right elements -->
+        </li>
+      </ul>
+      </div>
       </div>
       <!-- Container wrapper -->
     </nav>
@@ -118,26 +118,26 @@
   </div>
     <!-- Jumbotron -->
 
-    <section>
+    <section class="p-5 lg:p-12">
       <!-- logo display -->
-      <div class="p-12 bg-black">
-        <div class="grid grid-cols-2 gap-6 lg:grid-cols-6 lg:gap-20 px-auto items-center">
-          <a class="w-32 h-auto">
+      <div class="py-5 px-12 bg-black rounded-md lg:rounded-full">
+        <div class="grid grid-cols-2 gap-6 lg:grid-cols-6 lg:gap-20 px-auto items-center justify-center">
+          <a class="w-28 h-auto">
             <img src="./img/sd trans.png">
           </a>
-          <a class="w-32 h-auto">
+          <a class="w-28 h-auto">
             <img src="./img/ebaneezar.png">
           </a>
-          <a class="w-32 h-auto">
+          <a class="w-28 h-auto">
             <img src="./img/eddies ds.png">
           </a>
-          <a class="w-32 h-auto">
+          <a class="w-28 h-auto">
             <img src="./img/lilies.png">
           </a>
-          <a class="w-32 h-auto">
+          <a class="w-28 h-auto">
             <img src="./img/craig ds.png">
           </a>
-          <a class="w-32 h-auto">
+          <a class="w-28 h-auto">
             <img src="./img/qs ds.png">
           </a>
         </div>
