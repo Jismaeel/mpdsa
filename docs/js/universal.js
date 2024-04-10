@@ -32,3 +32,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
   // Call the function to start the process
   simulateAsyncOperation();
+
+
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('translate-x-0');
+});
