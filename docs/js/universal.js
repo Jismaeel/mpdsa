@@ -46,51 +46,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // DOM elements
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    const resultsList = document.getElementById('results');
-    const datasetItems = document.getElementById('dataset').getElementsByTagName('li');
+  function search() {
+    const input = document.getElementById('searchbar').value.trim().toLowerCase();
+    const sections = document.querySelectorAll('h2');
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    suggestionsContainer.innerHTML = '';
 
-    // Function to perform search
-    function search(query) {
-        // Clear previous results
-        resultsList.innerHTML = '';
+    sections.forEach(section => {
+      const sectionText = section.textContent.trim().toLowerCase();
+      if (sectionText.includes(input)) {
+        const suggestion = document.createElement('div');
+        suggestion.classList.add('search-suggestion');
+        suggestion.textContent = section.textContent;
+        suggestion.addEventListener('click', () => {
+          section.scrollIntoView({ behavior: 'smooth' });
+          suggestionsContainer.classList.add('hidden');
+        });
+        suggestionsContainer.appendChild(suggestion);
+      }
+    });
 
-        // Filter dataset based on search query
-        for (let i = 0; i < datasetItems.length; i++) {
-            const item = datasetItems[i].textContent.toLowerCase();
-            if (item.includes(query)) {
-                resultsList.appendChild(datasetItems[i].cloneNode(true));
-            }
-        }
+    if (input === '') {
+      suggestionsContainer.classList.add('hidden');
+    } else {
+      suggestionsContainer.classList.remove('hidden');
     }
+  }
 
-    // Event listener for input changes
-    searchInput.addEventListener('input', handleSearchInputChange);
-
-    // Event listener for button click
-    searchButton.addEventListener('click', handleSearchButtonClick);
-
-    // Event listener for dataset item click
-    for (let i = 0; i < datasetItems.length; i++) {
-        datasetItems[i].addEventListener('click', handleDatasetItemClick);
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      search();
     }
-
-    // Function to handle search input change
-    function handleSearchInputChange() {
-        search(searchInput.value.toLowerCase());
-    }
-
-    // Function to handle search button click
-    function handleSearchButtonClick() {
-        search(searchInput.value.toLowerCase());
-    }
-
-    // Function to handle dataset item click
-    function handleDatasetItemClick(event) {
-        const clickedItemText = event.target.textContent.toLowerCase();
-        search(clickedItemText);
-    }
-});
+  }

@@ -26,3 +26,22 @@
             transform: translateX(-100%);
         }
     }
+
+
+     /* Style for search suggestion list */
+     .search-suggestions {
+      position: absolute;
+      z-index: 10;
+      background-color: white;
+      border: 1px solid #ccc;
+      width: calc(100% - 2rem);
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .search-suggestion {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    .search-suggestion:hover {
+      background-color: #f3f3f3;
+    }

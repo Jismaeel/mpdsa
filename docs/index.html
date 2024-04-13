@@ -131,37 +131,28 @@
             </a>
           </li>
           <li>
-
             <!-- Search input -->
             <div class="max-w-md mx-auto">
-              <div class="flex items-center text-white border-b-2 border-blue-500 py-2">
-                <input type="text" id="searchInput"
-                  class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+              <div class="flex items-center text-white border-b-2 border-red-500 py-2">
+                <input type="text" id="searchbar"
+                  class=" bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
                   placeholder="Search...">
-                <button id="searchButton"
-                  class="flex-shrink-0 bg-red-600 hover:bg-red-800  text-sm  text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                <button onclick="search()"
+                  class="flex-shrink-0 bg-red-600 hover:bg-red-800  text-sm  text-white py-1 px-2 rounded">
+                  <svg class="w-6 h-6 text-white" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
                     <path fill-rule="evenodd"
                       d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
                       clip-rule="evenodd" />
                   </svg>
-
                 </button>
               </div>
-              <ul id="results" class="mt-4"></ul>
-
-              <!-- Sample dataset -->
-              <ul id="dataset" class="hidden">
-                <li class="cursor-pointer">Apple</li>
-                <li class="cursor-pointer">Banana</li>
-                <li class="cursor-pointer">Orange</li>
-                <li class="cursor-pointer">Pineapple</li>
-                <li class="cursor-pointer">Grapes</li>
-                <li class="cursor-pointer">Watermelon</li>
-              </ul>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions hidden"></div>
           </li>
+        
+  
       </div>
     </aside>
 
@@ -405,9 +396,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Skylas Driving School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
@@ -437,9 +428,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Q's Driving School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
@@ -470,9 +461,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Two Lillies Drving School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
@@ -503,9 +494,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Eddies Drving School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
@@ -536,9 +527,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Ebenezer Drivivg School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
@@ -569,9 +560,9 @@
             <div class="p-6">
 
               <!-- Title -->
-              <h5 class="mb-2 text-xl font-bold tracking-wide text-black">
+              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
                 Craigs Driving School
-              </h5>
+              </h2>
 
               <!-- Text -->
               <p class="mb-2 text-base text-black">
