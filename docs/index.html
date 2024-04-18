@@ -134,25 +134,29 @@
             <!-- Search input -->
             <div class="max-w-md mx-auto">
               <div class="flex items-center text-white border-b-2 border-red-500 py-2">
-                <input type="text" id="searchbar"
+                <input type="text" id="searchInput"
                   class=" bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
                   placeholder="Search...">
-                <button onclick="search()"
+                  <button id="clearButton" class="flex top-0 right-12 px-4 py-2 bg-transparent text-white rounded-r-md">
+                    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                    </svg>                    
+                  </button>
+                <button id="searchButton"
                   class="flex-shrink-0 bg-red-600 hover:bg-red-800  text-sm  text-white py-1 px-2 rounded">
-                  <svg class="w-6 h-6 text-white" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
                     <path fill-rule="evenodd"
                       d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
                       clip-rule="evenodd" />
                   </svg>
                 </button>
+                
               </div>
             </div>
-            <div id="searchSuggestions" class="search-suggestions hidden"></div>
-          </li>
-        
-  
+            <ul id="searchSuggestions" class="hidden bg-white hover:bg-red-500"></ul>
+        </li>
       </div>
     </aside>
 
@@ -248,9 +252,11 @@
               </div>
               <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                 <div class="px-6 py-12 md:px-12">
+                  <section id="section1">
                   <h2 id="Aboutus" class="mb-4 text-2xl font-bold text-white">
                     About Mitchells Plain Driving School Association
                   </h2>
+                </section>
                   <p class="mb-6 flex items-center font-bold uppercase text-danger">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                       stroke="currentColor" class="mr-2 h-5 w-5">

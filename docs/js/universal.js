@@ -34,47 +34,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   simulateAsyncOperation();
 
 
-  function dropDown() {
-    document.querySelector('#submenu').classList.toggle('hidden')
-    document.querySelector('#arrow').classList.toggle('rotate-0')
-  }
-  dropDown()
-
-  function Openbar() {
-    document.querySelector('.sidebar').classList.toggle('left-[-300px]')
-  }
 
 
 
-  function search() {
-    const input = document.getElementById('searchbar').value.trim().toLowerCase();
-    const sections = document.querySelectorAll('h2');
-    const suggestionsContainer = document.getElementById('searchSuggestions');
-    suggestionsContainer.innerHTML = '';
+// search bar 
+const searchInput = document.getElementById('searchInput');
+const clearButton = document.getElementById('clearButton');
+const searchButton = document.getElementById('searchButton');
+const searchSuggestions = document.getElementById('searchSuggestions');
 
-    sections.forEach(section => {
-      const sectionText = section.textContent.trim().toLowerCase();
-      if (sectionText.includes(input)) {
-        const suggestion = document.createElement('div');
-        suggestion.classList.add('search-suggestion');
-        suggestion.textContent = section.textContent;
-        suggestion.addEventListener('click', () => {
-          section.scrollIntoView({ behavior: 'smooth' });
-          suggestionsContainer.classList.add('hidden');
+function showSuggestions() {
+    const searchText = searchInput.value.toLowerCase();
+    const filteredSuggestions = Array.from(document.querySelectorAll('h2'))
+        .map(section => section.textContent)
+        .filter(sectionText => sectionText.toLowerCase().includes(searchText));
+
+    searchSuggestions.innerHTML = ''; // Clear previous suggestions
+
+    filteredSuggestions.forEach(suggestion => {
+        const li = document.createElement('li');
+        li.textContent = suggestion;
+        li.classList.add('px-4', 'py-2', 'cursor-pointer', 'hover:bg-gray-100');
+        li.addEventListener('click', () => {
+            searchInput.value = suggestion;
+            hideSuggestions();
         });
-        suggestionsContainer.appendChild(suggestion);
-      }
+        searchSuggestions.appendChild(li);
     });
 
-    if (input === '') {
-      suggestionsContainer.classList.add('hidden');
+    if (filteredSuggestions.length > 0) {
+        searchSuggestions.classList.remove('hidden');
     } else {
-      suggestionsContainer.classList.remove('hidden');
+        searchSuggestions.classList.add('hidden');
     }
-  }
+}
 
-  function handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      search();
-    }
-  }
+function hideSuggestions() {
+    searchSuggestions.classList.add('hidden');
+}
+
+function navigateToSection() {
+  const searchText = searchInput.value.toLowerCase();
+  const sections = document.querySelectorAll('[data-search-term]');
+
+  sections.forEach(section => {
+      const searchTerm = section.getAttribute('data-search-term').toLowerCase();
+      if (searchTerm === searchText) {
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+}
+
+
+searchInput.addEventListener('input', () => {
+    showSuggestions();
+});
+
+clearButton.addEventListener('click', () => {
+    searchInput.value = '';
+    hideSuggestions();
+});
+
+searchButton.addEventListener('click', () => {
+    navigateToSection();
+    hideSuggestions();
+});
