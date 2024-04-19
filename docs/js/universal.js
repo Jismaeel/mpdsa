@@ -73,17 +73,19 @@ function hideSuggestions() {
     searchSuggestions.classList.add('hidden');
 }
 
-function navigateToSection() {
-  const searchText = searchInput.value.toLowerCase();
-  const sections = document.querySelectorAll('[data-search-term]');
+function navigateToh2() {
+    const searchText = searchInput.value.toLowerCase(); // Get the search input text
+    const h2Elements = document.querySelectorAll('h2'); // Select all <h2> elements on the page
 
-  sections.forEach(section => {
-      const searchTerm = section.getAttribute('data-search-term').toLowerCase();
-      if (searchTerm === searchText) {
-          section.scrollIntoView({ behavior: 'smooth' });
-      }
-  });
+    // Loop through each <h2> element
+    h2Elements.forEach(h2 => {
+        // Check if the text content of the <h2> element matches the search input text
+        if (h2.textContent.toLowerCase().includes(searchText)) {
+            h2.scrollIntoView({ behavior: 'smooth' }); // If found, scroll to that <h2> element
+        }
+    });
 }
+
 
 
 searchInput.addEventListener('input', () => {
@@ -96,6 +98,6 @@ clearButton.addEventListener('click', () => {
 });
 
 searchButton.addEventListener('click', () => {
-    navigateToSection();
+    navigateToh2();
     hideSuggestions();
 });
