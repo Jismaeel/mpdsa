@@ -101,3 +101,32 @@ searchButton.addEventListener('click', () => {
     navigateToh2();
     hideSuggestions();
 });
+
+
+
+// linked with server.js
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const requestData = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message')
+    };
+
+    fetch('https://msdsa-sever.glitch.me//send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        document.getElementById('contact-form').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});

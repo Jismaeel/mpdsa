@@ -53,7 +53,7 @@
             <li>
               <a href="./index.html"
                 class="block py-2 px-3 text-white rounded hover:bg-red-500 md:hover:bg-transparent md:border-0 md:hover:text-red-400 md:p-0 "
-                aria-current="page">Home</a>
+                aria-current="page">Dashboard</a>
             </li>
             <li>
               <a href="#Membership"
@@ -231,8 +231,8 @@
         </div>
       </div>
     </section>
+<div>
 
-    <div>
       <!-- Contact us -->
       <section>
         <div
@@ -249,48 +249,47 @@
 
             <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 px-6">
 
-              <!-- Section: Design Block -->
               <div class="mx-auto max-w-[700px] md:px-3 text-center">
                 <h2 id="Contactus" class="my-12 text-3xl font-bold text-white">Contact us</h2>
-                <form>
-                  <div class="relative mb-6" data-te-input-wrapper-init>
-                    <input type="text"
-                      class="peer block min-h-[auto] w-full text-red-400 rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-red-500 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleInput90" placeholder="Name" />
-                    <label
-                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-red-400 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none"
-                      for="exampleInput90">Name
-                    </label>
+                <form id="contactForm" class="text-left">
+                  <div class="mb-4">
+                    <label type="text" id="name" name="name" placeholder="Your Name" required class="block mb-2 text-sm font-medium text-white">First
+                      name</label>
+                    <input type="text" id="first_name"
+                      class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                      placeholder="John" required />
                   </div>
-                  <div class="relative mb-6" data-te-input-wrapper-init>
-                    <input type="email"
-                      class="peer block min-h-[auto] w-full text-red-400 rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-red-400 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleInput91" placeholder="Email address" />
-                    <label
-                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-red-400 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none"
-                      for="exampleInput91">Email address
-                    </label>
+                  <div class="mb-4">
+                    <label for="helper-text" class="block mb-2 text-sm font-medium text-white">Your
+                      email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required
+                      class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                      >
+                    <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never
+                      share your details. Read our <a href="#"
+                        class="font-medium hover:underline text-red-500">Privacy Policy</a>.</p>
                   </div>
-                  <div class="relative mb-6" data-te-input-wrapper-init>
-                    <textarea
-                      class="peer block min-h-[auto] text-red-400 w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
-                    <label for="exampleFormControlTextarea1"
-                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-red-400 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none text-white">Message</label>
+                  <div class="mb-4">
+
+                    <label for="message" class="block mb-2 text-sm font-medium  text-white">Your
+                      message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required rows="4"
+                      class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                      ></textarea>
+
                   </div>
-                  <button type="button" data-te-ripple-init data-te-ripple-color="light"
-                    class="mb-6 inline-block w-full rounded bg-red-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-red-800 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
-                    Send
-                  </button>
+                  <div class="items-start">
+                    <button type="submit"
+                      class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Submit</button>
+                  </div>
                 </form>
               </div>
-              <!-- Section: Design Block -->
             </div>
           </div>
         </div>
     </div>
     </section>
-    <!-- Section: Design Block -->
+    
     <!-- Footer -->
     <footer id="#section2" class="bg-gray-900 font-mono text-white py-4">
       <div class="flex justify-center py-4">
@@ -336,11 +335,5 @@
   <script type="text/javascript" src="./js/universal.js"></script>
   <script type="text/javascript" src="./js/tw-elements/tw-elements.umd.min.js"></script>
 
-
-
-
 </body>
-
-
-
 </html>
