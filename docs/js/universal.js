@@ -114,7 +114,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: formData.get('message')
     };
 
-    fetch('https://msdsa-sever.glitch.me//send-email', {
+    fetch('https://msdsa-sever.glitch.me/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
