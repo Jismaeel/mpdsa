@@ -130,3 +130,29 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         console.error('Error:', error);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the contact form
+    const contactForm = document.getElementById('contact-form');
+
+    // Add submit event listener
+    contactForm.addEventListener('submit', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Perform form validation or submission via AJAX to your server
+        // For this example, let's assume the form submission fails
+        const isError = false;
+        const isCorrect = true;
+
+        if (isCorrect) {
+            // Show the correct alert
+            const correctAlert = document.getElementById('correct');
+            correctAlert.classList.remove('hidden'); // Remove the 'hidden' class to display the alert
+        } else if (isError) {
+            // Show the error alert
+            const errorAlert = document.getElementById('wrong');
+            errorAlert.classList.remove('hidden');
+        }
+    });
+});
