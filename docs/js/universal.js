@@ -104,32 +104,6 @@ searchButton.addEventListener('click', () => {
 
 
 
-// linked with server.js
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    const requestData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-    };
-
-    fetch('https://msdsa-sever.glitch.me/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requestData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        document.getElementById('contact-form').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Select the contact form
@@ -140,19 +114,31 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent the default form submission
         event.preventDefault();
 
-        // Perform form validation or submission via AJAX to your server
-        // For this example, let's assume the form submission fails
-        const isError = false;
-        const isCorrect = true;
+        // Get form data
+        const formData = new FormData(contactForm);
+        const requestData = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message')
+        };
 
-        if (isCorrect) {
-            // Show the correct alert
-            const correctAlert = document.getElementById('correct');
-            correctAlert.classList.remove('hidden'); // Remove the 'hidden' class to display the alert
-        } else if (isError) {
-            // Show the error alert
-            const errorAlert = document.getElementById('wrong');
-            errorAlert.classList.remove('hidden');
-        }
+        // Send form data to server
+        fetch('https://msdsa-sever.glitch.me/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Handle response
+            alert(data);
+            contactForm.reset();
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Error:', error);
+        });
     });
 });
