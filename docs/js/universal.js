@@ -37,6 +37,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+
+// Show the alert and hide it after 3 seconds
+function showAlert(alertId) {
+    // Get the alert element by its ID
+    let alert = document.getElementById(alertId);
+    
+    // Remove the 'hidden' class to display the alert
+    alert.classList.remove('hidden');
+    
+    // Set a timer to add the 'hidden' class back after 3 seconds
+    setTimeout(function() {
+        alert.classList.add('hidden');
+    }, 1000); // 1000 milliseconds = 3 seconds
+    
+    // Add event listener to the close button
+    let closeBtn = alert.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function() {
+        alert.classList.add('hidden');
+    });
+}
+
+// Example usage:
+// Replace 'correct' with 'wrong' if you want to show the incorrect submission alert
+showAlert('correct');
+
+
+
+  
+  
+  
+  
+
+
 // search bar 
 const searchInput = document.getElementById('searchInput');
 const clearButton = document.getElementById('clearButton');
@@ -131,6 +164,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     });
 });
 
+
+
+
+// Alert
 document.addEventListener('DOMContentLoaded', function() {
     // Select the contact form
     const contactForm = document.getElementById('contact-form');
@@ -154,5 +191,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const errorAlert = document.getElementById('wrong');
             errorAlert.classList.remove('hidden');
         }
+    });
+});
+
+// membership
+document.getElementById('membership-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const requestData = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        Drivingschool: formData.get('drivingSchool'), // Assuming the field is named drivingSchool in the form
+        phone: formData.get('phone'),
+        area: formData.get('area')
+    };
+
+    fetch('https://msdsa-sever.glitch.me/submit-membership-form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        document.getElementById('membership-form').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
 });
