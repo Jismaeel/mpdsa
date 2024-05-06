@@ -138,33 +138,33 @@ searchButton.addEventListener('click', () => {
 
 
 // linked with server.js
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    const formData = new FormData(this);
-    const requestData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-    };
-
-    fetch('https://msdsa-sever.glitch.me/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requestData)
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+  
+    // Send data to server
+    fetch("https://contact-form-index.glitch.me/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, email, message })
     })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        document.getElementById('contact-form').reset();
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("response").innerText = "Message sent successfully!";
+      } else {
+        throw new Error("Failed to send message");
+      }
     })
     .catch(error => {
-        console.error('Error:', error);
+      console.error("Error:", error);
+      document.getElementById("response").innerText = "An error occurred while sending the message";
     });
-});
-
-
+  });
 
 
 // Alert
@@ -191,34 +191,5 @@ document.addEventListener('DOMContentLoaded', function() {
             const errorAlert = document.getElementById('wrong');
             errorAlert.classList.remove('hidden');
         }
-    });
-});
-
-// membership
-document.getElementById('membership-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    const requestData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        Drivingschool: formData.get('drivingSchool'), // Assuming the field is named drivingSchool in the form
-        phone: formData.get('phone'),
-        area: formData.get('area')
-    };
-
-    fetch('https://msdsa-sever.glitch.me/submit-membership-form', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requestData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        document.getElementById('membership-form').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
     });
 });
