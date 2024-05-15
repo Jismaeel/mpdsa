@@ -107,88 +107,136 @@
                 <a href="#" class="flex items-center mb-3 text-2xl font-semibold text-white">
                     <img class="w-40 h-auto mr-2" src="./img/sd trans.png" alt="logo">
                 </a>
-                <div class="bg-gray-700 text-white rounded-lg shadow-xl">
-                <form action="#" method="post" class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                    <fieldset class="mb-4">
-                        <legend id="membership" class="block text-sm font-semibold mb-2">Booking Information:</legend>
-                        <div class="mb-4">
-                            <label for="fullname" class="block  text-sm font-medium  mb-2">Full Name:</label>
-                            <input type="text" id="fullname" name="fullname" required class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="contact" class="block text-sm font-medium mb-2">Contact Number:</label>
-                            <input type="text" id="contact" name="contact" required class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium mb-2">Email Address:</label>
-                            <input type="email" id="email" name="email" required class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="address" class="block text-sm font-medium mb-2">Address:</label>
-                            <textarea id="address" name="address" required class="w-full text-white bg-slate-600 border rounded px-3 py-2"></textarea>
-                        </div>
-                    </fieldset>
-                    <fieldset class="mb-4">
-                        <legend class="block text-sm font-semibold mb-2">Course Selection:</legend>
-                        <div class="mb-4">
-                            <input type="checkbox" id="beginner" name="course" value="beginner" class="mr-2">
-                            <label for="beginner" class="text-sm">Beginner's Course (10 sessions)</label>
-                        </div>
-                        <div class="mb-4">
-                            <input type="checkbox" id="refresher" name="course" value="refresher" class="mr-2">
-                            <label for="refresher" class="text-sm">Refresher Course (5 sessions)</label>
-                        </div>
-                        <div class="mb-4">
-                            <input type="checkbox" id="advanced" name="course" value="advanced" class="mr-2">
-                            <label for="advanced" class="text-sm">Advanced Driving Course (8 sessions)</label>
-                        </div>
-                        <div class="mb-4">
-                            <label for="custom" class="block text-sm font-medium mb-2">Customized Course:</label>
-                            <input type="text" id="custom" name="custom_course" class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                        </div>
-                    </fieldset>
-                    <fieldset class="mb-4">
-                        <legend class="block text-sm font-semibold mb-2">Preferred Schedule:</legend>
-                        <div class="mb-4">
-                            <label for="startdate" class="block text-sm font-medium mb-2">Start Date:</label>
-                            <input type="date" id="startdate" name="startdate" required class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="time" class="block mb-2 text-sm font-medium text-white">Select time:</label>
-                            <div class="relative">
-                                <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
-                                    <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                        <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl">
+                    <form id="bookingsform1" class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                            <legend class="block text-sm font-semibold mb-2">Booking Information:</legend>
+                            <div class="mb-4">
+                                <label for="fullname" class="block  text-sm font-medium  mb-2">Full Name:</label>
+                                <input type="text" id="fullname" name="fullname" required
+                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact" class="block text-sm font-medium mb-2">Contact Number:</label>
+                                <input type="text" id="contact" name="contact" required
+                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address:</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
+                            </div>
+                            <div class="mb-4">
+                                <label for="address" class="block text-sm font-medium mb-2">Address:</label>
+                                <textarea id="address" name="address" required
+                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2"></textarea>
+                            </div>
+                            <legend class="block text-sm font-semibold mb-2">Course Selection:</legend>
+                            <div class="grid grid-cols-2 gap-5">
+                                <div class="flex items-center mb-4">
+                                    <input id="north-radio" type="radio" name="course-option" value="north"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="north-radio"
+                                        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a href="#"
+                                            class="text-red-300 hover:underline">North</a>.</label>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <input id="south-radio" type="radio" name="course-option" value="south"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="south-radio"
+                                        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a href="#"
+                                            class="text-red-200 hover:underline">South</a>.</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <form class="max-w-sm mx-auto mb-3">
+                                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a
+                                        Package</label>
+                                    <select id="package-list"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected disabled>Select a course option first</option>
+                                    </select>
+                                </form>
+                                <div id="car-hire-north" class="mt-3 hidden">
+                                    <label class="inline-flex items-center cursor-pointer">
+                                        <input id="car-hire-checkbox-north" type="checkbox" value="R650"
+                                            class="sr-only peer">
+                                        <div
+                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                        </div>
+                                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car hire
+                                            R650</span>
+                                    </label>
+                                </div>
+                                <div id="car-hire-south" class="mt-3 hidden">
+                                    <label class="inline-flex items-center cursor-pointer">
+                                        <input id="car-hire-checkbox-south" type="checkbox" value="R750"
+                                            class="sr-only peer">
+                                        <div
+                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                        </div>
+                                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car hire
+                                            R750</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="relative max-w-sm mb-3">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input type="time" id="time" class=" border leading-none  text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-4 text-white focus:ring-red-500 focus:border-red-500" min="09:00" max="18:00" value="00:00" required />
+                                <input datepicker datepicker-format="mm/dd/yyyy" type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date">
                             </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="mb-4">
-                        <legend class="block text-sm font-semibold mb-2">Additional Information/Comments:</legend>
-                        <textarea id="comments" name="comments" class="w-full text-white bg-slate-600 border rounded px-3 py-2"></textarea>
-                    </fieldset>
-                    <div class="flex items-center justify-between">
-                        <input type="submit" value="Submit" class="bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none hover:bg-red-800 focus:shadow-outline cursor-pointer">
-                    </div>
-                </form>
-            </div>
+                            <button type="submit" id="submit-btn"
+                                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                Submit
+                            </button>
+                    </form>
+                </div>
             </div>
         </section>
 
-    <!-- google map -->
-    <section>
-        <div class="block w-full shrink-0 grow-0 basis-auto">
-          <div class="h-[500px] w-full">
-            <iframe class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52893.19745535861!2d18.561739174606267!3d-34.04836395999219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4721e60ec221%3A0xd3097704b4edb9ac!2sMitchells%20Plain%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1711307058478!5m2!1sen!2sza"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-</section>
-        
+          <!-- Alert for correct submission -->
+    <div id="correct"
+    class="px-10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 alert success p-4 mb-4 border h-auto w-96 rounded-lg bg-gray-800 text-green-400 border-green-800"
+    role="alert">
+    <div class="flex items-center">
+      <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor" viewBox="0 0 20 20">
+        <path
+          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+      </svg>
+      <span class="sr-only">Info</span>
+      <h3 class="text-lg font-medium">This is a success alert</h3>
+    </div>
+    <div class="mt-2 mb-4 text-sm">
+      Message was sent successfully </div>
+    <div class="flex">
+      </button>
+      <button type="button"
+        class="close-btn text-green-800 bg-transparent border border-green-800 hover:bg-green-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-green-600 dark:border-green-600 dark:text-green-400 dark:hover:text-white dark:focus:ring-green-800"
+        data-dismiss-target="#alert-additional-content-3" aria-label="Close">
+        Dismiss
+      </button>
+    </div>
+  </div>
+
+        <!-- google map -->
+        <section>
+            <div class="block w-full shrink-0 grow-0 basis-auto">
+                <div class="h-[500px] w-full">
+                    <iframe class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52893.19745535861!2d18.561739174606267!3d-34.04836395999219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4721e60ec221%3A0xd3097704b4edb9ac!2sMitchells%20Plain%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1711307058478!5m2!1sen!2sza"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer id="#section2" class="bg-gray-900 font-mono text-white py-4">
             <div class="flex justify-center py-4">
@@ -227,14 +275,140 @@
     </div>
 
 
+    <script>
+       document.getElementById("bookingsform1").addEventListener("submit", function (event) {
+  event.preventDefault();
+  // Your form submission logic here...
+});
 
+document.getElementById("submit-btn").addEventListener("click", function (event) {
+  event.preventDefault();
+  const form = document.getElementById("bookingsform1");
+  const formData = new FormData(form);
+
+  // Collect course option
+  const courseOption = form.querySelector('input[name="course-option"]:checked') ? form.querySelector('input[name="course-option"]:checked').value : null;
+
+  // Collect car hire option
+  const carHireNorth = form.querySelector('#car-hire-checkbox-north').checked;
+  const carHireSouth = form.querySelector('#car-hire-checkbox-south').checked;
+  
+  // Construct data object
+  const data = {
+    fullname: formData.get("fullname"),
+    contact: formData.get("contact"),
+    email: formData.get("email"),
+    address: formData.get("address"),
+    courseOption: courseOption,
+    packageOption: formData.get("package-list"),
+    carHire: {
+      north: carHireNorth,
+      south: carHireSouth
+    },
+    selectedDate: formData.get('selected-date')
+  };
+
+  // Send data to server
+  fetch("http://localhost:5000/submit-form", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("response").innerText = "Form submitted successfully!";
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      document.getElementById("response").innerText = "An error occurred while submitting the form";
+    });
+});
+
+
+
+
+
+        // Alert
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select the contact form
+            const contactForm = document.getElementById('bookingsform1');
+
+            // Add submit event listener
+            contactForm.addEventListener('submit', function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Perform form validation or submission via AJAX to your server
+                // For this example, let's assume the form submission fails
+                const isError = false;
+                const isCorrect = true;
+
+                if (isCorrect) {
+                    // Show the correct alert
+                    const correctAlert = document.getElementById('correct');
+                    correctAlert.classList.remove('hidden'); // Remove the 'hidden' class to display the alert
+                } else if (isError) {
+                    // Show the error alert
+                    const errorAlert = document.getElementById('wrong');
+                    errorAlert.classList.remove('hidden');
+                }
+            });
+        });
+
+
+        // cousrse selection
+        document.addEventListener("DOMContentLoaded", function () {
+            const packageList = document.getElementById("package-list");
+            const carHireCheckboxNorth = document.getElementById("car-hire-checkbox-north");
+            const carHireCheckboxSouth = document.getElementById("car-hire-checkbox-south");
+            const northRadio = document.getElementById("north-radio");
+            const southRadio = document.getElementById("south-radio");
+
+            northRadio.addEventListener("change", function () {
+                if (this.checked) {
+                    packageList.innerHTML = `
+                        <option selected disabled>Select a package</option>
+                        <option>R1300 - 6 lesson</option>
+                        <option>R1700 - 8 lesson</option>
+                        <option>R2100 - 10 lesson</option>
+                    `;
+                    document.getElementById("car-hire-north").classList.remove("hidden");
+                    document.getElementById("car-hire-south").classList.add("hidden");
+                }
+            });
+
+            southRadio.addEventListener("change", function () {
+                if (this.checked) {
+                    packageList.innerHTML = `
+                        <option selected disabled>Select a package</option>
+                        <option>R1200 - 6 lesson</option>
+                        <option>R1600 - 8 lesson</option>
+                        <option>R2000 - 10 lesson</option>
+                    `;
+                    document.getElementById("car-hire-south").classList.remove("hidden");
+                    document.getElementById("car-hire-north").classList.add("hidden");
+                }
+            });
+
+            packageList.addEventListener("change", function () {
+                if (carHireCheckboxNorth.checked || carHireCheckboxSouth.checked) {
+                    const selectedPackage = packageList.options[packageList.selectedIndex].text;
+                    const price = selectedPackage.split(" - ")[0].replace(/[^0-9]/g, '');
+                    console.log("Selected package price:", price);
+                }
+            });
+        });
+    </script>
 
     <script src="./js/flowbite/flowbite.min.js"></script>
+    <script src="./js/flowbite/datepicker.js"></script>
     <script type="text/javascript" src="./js/universal.js"></script>
     <script type="text/javascript" src="./js/tw-elements/tw-elements.umd.min.js"></script>
-
-
-
 
 </body>
 

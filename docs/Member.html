@@ -41,7 +41,7 @@
         <button data-collapse-toggle="navbar-default" type="button"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default" aria-expanded="false">
-         
+
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M1 1h15M1 7h15M1 13h15" />
@@ -154,90 +154,106 @@
             <h1 id="Membership" class="text-xl font-bold leading-tight tracking-tight text-white">
               Membership
             </h1>
-            <form class="space-y-4 md:space-y-6" action="#">
+            <form id="membership-form" class="space-y-4 md:space-y-6">
               <div>
-                <label for="name" class="block mb-2 text-sm font-medium text-white">Name</label>
-                <input type="name" name="name" id="name" placeholder="John/Jane"
-                  class=" border sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  required="">
+                <label class="block mb-2 text-sm font-medium text-white">Name</label>
+                <input type="text" name="name" id="name" placeholder="John/Jane"
+                  class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  required>
               </div>
               <div>
-                <label for="surname" class="block mb-2 text-sm font-medium text-white">Surname</label>
-                <input type="surname" name="surname" id="surname" placeholder="Doe"
-                  class=" border sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  required="">
+                <label class="block mb-2 text-sm font-medium text-white">Surname</label>
+                <input type="text" name="surname" id="surname" placeholder="Doe"
+                  class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  required>
               </div>
               <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-white">Your
-                  email</label>
+                <label class="block mb-2 text-sm font-medium text-white">Your email</label>
                 <input type="email" name="email" id="email"
-                  class=" border sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="name@company.com" required="">
+                  class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="name@company.com" required>
               </div>
               <div>
-                <label for="password" class="block mb-2 text-sm font-medium text-white">Driving Schools Name</label>
-                <input type="Drivingschool" name="Drivingschool" id="Drivingschool" placeholder="** Driving Schools"
-                  class=" border sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  required="">
+                <label class="block mb-2 text-sm font-medium text-white">Driving Schools Name</label>
+                <input type="text" name="school" placeholder="** Driving Schools"
+                  class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  required>
               </div>
-
               <div>
-                <label for="phone-input" class="block mb-2 text-sm font-medium text-white">Phone
-                  number:</label>
-                <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-                 
-                </div>
-                <input type="text" id="phone-input" aria-describedby="helper-text-explanation"
-                  class=" border  text-sm rounded-lg block w-full ps-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
-
-                <p id="helper-text-explanation" class="mt-2 text-sm text-gray-400">Select a phone
-                  number that matches the format.</p>
+                <label class="block mb-2 text-sm font-medium text-white">Phone number</label>
+                <input type="number" name="number" aria-describedby="helper-text-explanation"
+                  class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                <p id="helper-text-explanation" class="mt-2 text-sm text-gray-400">Select a phone number that matches
+                  the format.</p>
               </div>
-
               <div>
-                <label for="area" class="block mb-2 text-sm font-medium text-white">Select an area</label>
-                <select id="area"
-                  class="border sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
-                  <option selected>Choose a area</option>
+                <label class="block mb-2 text-sm font-medium text-white">Select an area</label>
+                <select id="area" name="area"
+                  class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
+                  <option selected>Choose an area</option>
                   <option value="SF">Strandfontein</option>
                   <option value="E">Eastridge</option>
                   <option value="BV">Bayview</option>
                   <option value="BE">Beacon Valley</option>
                 </select>
               </div>
-
               <div class="flex items-start">
                 <div class="flex items-center h-5">
-                  <input id="terms" aria-describedby="terms" type="checkbox"
+                  <input name="terms" id="terms-checkbox" type="checkbox"
                     class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                    required="">
+                    required>
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="terms" class="font-light text-gray-300" aria-required="true">I accept the <a
-                      class="font-medium text-red-400 hover:underline" href="#">Terms and
-                      Conditions</a></label>
+                  <label for="terms-checkboxs" class="font-light text-gray-300" aria-required="true">I accept the <a
+                      class="font-medium text-red-400 hover:underline" href="#">Terms and Conditions</a></label>
                 </div>
               </div>
               <button type="submit"
-                class="w-full text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register</button>
+                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Submit</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-    
-<!-- google map -->
-<section>
-  <div class="block w-full shrink-0 grow-0 basis-auto">
-    <div class="h-[500px] w-full">
-      <iframe class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52893.19745535861!2d18.561739174606267!3d-34.04836395999219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4721e60ec221%3A0xd3097704b4edb9ac!2sMitchells%20Plain%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1711307058478!5m2!1sen!2sza"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Alert for correct submission -->
+    <div id="correct"
+      class="px-10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 alert success p-4 mb-4 border h-auto w-96 rounded-lg bg-gray-800 text-green-400 border-green-800"
+      role="alert">
+      <div class="flex items-center">
+        <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span class="sr-only">Info</span>
+        <h3 class="text-lg font-medium">This is a success alert</h3>
+      </div>
+      <div class="mt-2 mb-4 text-sm">
+        Message was sent successfully </div>
+      <div class="flex">
+        </button>
+        <button type="button"
+          class="close-btn text-green-800 bg-transparent border border-green-800 hover:bg-green-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-green-600 dark:border-green-600 dark:text-green-400 dark:hover:text-white dark:focus:ring-green-800"
+          data-dismiss-target="#alert-additional-content-3" aria-label="Close">
+          Dismiss
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+
+
+    <!-- google map -->
+    <section>
+      <div class="block w-full shrink-0 grow-0 basis-auto">
+        <div class="h-[500px] w-full">
+          <iframe class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52893.19745535861!2d18.561739174606267!3d-34.04836395999219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4721e60ec221%3A0xd3097704b4edb9ac!2sMitchells%20Plain%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1711307058478!5m2!1sen!2sza"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="#section2" class="bg-gray-900 font-mono text-white py-4">
@@ -275,14 +291,82 @@
       </div>
     </footer>
   </div>
-  
 
 
 
 
+
+  <script>
+  document.getElementById("membership-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // Send data to server
+  fetch("http://localhost:4000/send-membership-form", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: formData.get("name"),
+      surname: formData.get("surname"),
+      email: formData.get("email"),
+      drivingSchool: formData.get("school"),
+      phoneNumber: formData.get("number"),
+      area: formData.get("area")
+    })
+  })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("response").innerText = "Message sent successfully!";
+      } else {
+        throw new Error("Failed to send message");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      document.getElementById("response").innerText = "An error occurred while sending the message";
+    });
+});
+
+
+
+    // Alert
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select the contact form
+      const contactForm = document.getElementById('membership-form');
+
+      // Add submit event listener
+      contactForm.addEventListener('submit', function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Perform form validation or submission via AJAX to your server
+        // For this example, let's assume the form submission fails
+        const isError = false;
+        const isCorrect = true;
+
+        if (isCorrect) {
+          // Show the correct alert
+          const correctAlert = document.getElementById('correct');
+          correctAlert.classList.remove('hidden'); // Remove the 'hidden' class to display the alert
+        } else if (isError) {
+          // Show the error alert
+          const errorAlert = document.getElementById('wrong');
+          errorAlert.classList.remove('hidden');
+        }
+      });
+    });
+
+  </script>
   <script src="./js/flowbite/flowbite.min.js"></script>
   <script type="text/javascript" src="./js/universal.js"></script>
   <script type="text/javascript" src="./js/tw-elements/tw-elements.umd.min.js"></script>
 
+
+
 </body>
+
 </html>

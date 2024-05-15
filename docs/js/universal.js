@@ -138,33 +138,34 @@ searchButton.addEventListener('click', () => {
 
 
 // linked with server.js
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+ document.getElementById("contact-form").addEventListener("submit", function(event) {
+     event.preventDefault();
     
-    const name = document.getElementById("name").value;
+     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+     const message = document.getElementById("message").value;
   
-    // Send data to server
-    fetch("https://contact-form-index.glitch.me/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, email, message })
-    })
-    .then(response => {
+     // Send data to server
+     fetch("http://localhost:3000/send-contact-form", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json"
+       },
+       body: JSON.stringify({ name, email, message })
+     })
+
+     .then(response => {
       if (response.ok) {
-        document.getElementById("response").innerText = "Message sent successfully!";
-      } else {
+         document.getElementById("response").innerText = "Message sent successfully!";
+       } else {
         throw new Error("Failed to send message");
-      }
+       }
     })
-    .catch(error => {
+     .catch(error => {
       console.error("Error:", error);
-      document.getElementById("response").innerText = "An error occurred while sending the message";
-    });
-  });
+       document.getElementById("response").innerText = "An error occurred while sending the message";
+     });
+   });
 
 
 // Alert
@@ -193,3 +194,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
