@@ -146,7 +146,7 @@ searchButton.addEventListener('click', () => {
      const message = document.getElementById("message").value;
   
      // Send data to server
-     fetch("https://server-forms1.glitch.me/send-contact-form", {
+     fetch("http://localhost:3000/send-contact-form", {
        method: "POST",
        headers: {
          "Content-Type": "application/json"

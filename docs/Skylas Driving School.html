@@ -309,7 +309,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
   };
 
   // Send data to server
-  fetch("https://server-forms1.glitch.me/submit-form", {
+  fetch("http://localhost:5000/submit-form", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
