@@ -195,3 +195,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    const button = event.target.querySelector('button[type="submit"]');
+    const spinner = button.querySelector('.spinner');
+    const buttonText = button.querySelector('.button-text');
+    
+    // Show the spinner
+    button.disabled = true;
+    spinner.classList.remove('hidden');
+    buttonText.classList.add('invisible');
+  
+    // Simulate a delay for 1 second
+    setTimeout(() => {
+      // Hide the spinner
+      button.disabled = false;
+      spinner.classList.add('hidden');
+      buttonText.classList.remove('invisible');
+      
+      // Trigger your existing alert function
+      showAlert('Form submitted successfully!');
+    }, 1000);
+  }
+  
+  
+
+  
