@@ -8,7 +8,7 @@ document.getElementById("membership-form").addEventListener("submit", function (
      console.log(formData);
   
     // Send data to server
-    fetch("https://serverforms.glitch.me/submit", {
+    fetch("https://serverforms.glitch.me/submit-membership", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -17,8 +17,8 @@ document.getElementById("membership-form").addEventListener("submit", function (
         name: formData.get("name"),
         surname: formData.get("surname"),
         email: formData.get("email"),
-        school1: document.getElementById('school').value, // Corrected id
-        number1: document.getElementById('number').value, // Corrected id
+        school1: document.getElementById('school').value,
+        number1: document.getElementById('number').value,
         area: formData.get("area")
       })
     })
