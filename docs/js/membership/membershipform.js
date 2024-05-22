@@ -17,8 +17,8 @@ document.getElementById("membership-form").addEventListener("submit", function (
         name: formData.get("name"),
         surname: formData.get("surname"),
         email: formData.get("email"),
-        drivingSchool: formData.get("school"),
-        phoneNumber: formData.get("number"),
+        drivingSchool: formData.get("school1"),
+        phoneNumber: formData.get("number1"),
         area: formData.get("area")
       })
     })
