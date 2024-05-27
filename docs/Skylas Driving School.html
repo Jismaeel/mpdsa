@@ -101,129 +101,131 @@
             </div>
         </section>
 
-
         <section class="bg-gray-900">
-            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-4">
-                <a href="#" class="flex items-center mb-3 text-2xl font-semibold text-white">
-                    <img class="w-40 h-auto mr-2" src="./img/sd trans.png" alt="logo">
-                </a>
-                <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl">
-                    <form id="bookingsform1" class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                            <legend class="block text-sm font-semibold mb-2">Booking Information:</legend>
-                            <div class="mb-4">
-                                <label for="fullname" class="block  text-sm font-medium  mb-2">Full Name:</label>
-                                <input type="text" id="fullname" name="fullname" required
-                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                            </div>
-                            <div class="mb-4">
-                                <label for="contact" class="block text-sm font-medium mb-2">Contact Number:</label>
-                                <input type="text" id="contact" name="contact" required
-                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-sm font-medium mb-2">Email Address:</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2">
-                            </div>
-                            <div class="mb-4">
-                                <label for="address" class="block text-sm font-medium mb-2">Address:</label>
-                                <textarea id="address" name="address" required
-                                    class="w-full text-white bg-slate-600 border rounded px-3 py-2"></textarea>
-                            </div>
-                            <legend class="block text-sm font-semibold mb-2">Course Selection:</legend>
-                            <div class="grid grid-cols-2 gap-5">
-                                <div class="flex items-center mb-4">
-                                    <input id="north-radio" type="radio" name="course-option" value="north"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="north-radio"
-                                        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a href="#"
-                                            class="text-red-300 hover:underline">North</a>.</label>
-                                </div>
-                                <div class="flex items-center mb-4">
-                                    <input id="south-radio" type="radio" name="course-option" value="south"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="south-radio"
-                                        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a href="#"
-                                            class="text-red-200 hover:underline">South</a>.</label>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <form class="max-w-sm mx-auto mb-3">
-                                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a
-                                        Package</label>
-                                    <select id="package-list"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected disabled>Select a course option first</option>
-                                    </select>
+            <form>
+                <div class="bg-gray-900 py-10">
+                    <div class="flex flex-col items-center px-6 mx-auto">
+                        <a href="#" class="flex items-center mb-3 text-2xl font-semibold text-white">
+                            <img class="w-40 h-auto mr-2" src="./img/sd trans.png" alt="logo">
+                        </a>
+                        <div class="w-full  rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+                            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                                <h1 id="Membership" class="text-xl font-bold leading-tight tracking-tight text-white">
+                                    Bookings
+                                </h1>
+                                <form id="Bookingsform1" class="space-y-4 md:space-y-6">
+                                    <div>
+                                        <label class="block mb-2 text-sm font-medium text-white">Name</label>
+                                        <input type="text" name="name" id="name" placeholder="John/Jane"
+                                            class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                                            required>
+                                    </div>
+                                    <div>
+                                        <label class="block mb-2 text-sm font-medium text-white">Surname</label>
+                                        <input type="text" name="surname" id="surname" placeholder="Doe"
+                                            class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                                            required>
+                                    </div>
+                                    <div>
+                                        <label class="block mb-2 text-sm font-medium text-white">Your email</label>
+                                        <input type="email" name="email" id="email"
+                                            class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="name@company.com" required>
+                                    </div>
+                                    <div>
+                                        <label class="block mb-2 text-sm font-medium text-white">Phone number</label>
+                                        <input type="tel" name="number1" id="number"
+                                            aria-describedby="helper-text-explanation"
+                                            class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                                        <p id="helper-text-explanation" class="mt-2 text-sm text-gray-400">Select a
+                                            phone number that matches
+                                            the format.</p>
+                                    </div>
+                                    <div>
+                                        <legend class="block text-sm font-semibold mb-2 text-gray-50">Course Selection:
+                                        </legend>
+                                        <div class="grid grid-cols-2 gap-5">
+                                            <div class="flex items-center mb-4">
+                                                <input id="north-radio" type="radio" name="course-option" value="north"
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="north-radio"
+                                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a
+                                                        href="#" class="text-red-300 hover:underline">North</a>.</label>
+                                            </div>
+                                            <div class="flex items-center mb-4">
+                                                <input id="south-radio" type="radio" name="course-option" value="south"
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                <label for="south-radio"
+                                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a
+                                                        href="#" class="text-red-200 hover:underline">South</a>.</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+                                                a Package</label>
+                                            <select id="package-list"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option selected disabled>Select a course option first</option>
+                                            </select>
+                                            <div id="car-hire-north" class="mt-3 hidden">
+                                                <label class="inline-flex items-center cursor-pointer">
+                                                    <input id="car-hire-checkbox-north" type="checkbox" value="R650"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                                    </div>
+                                                    <span
+                                                        class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car
+                                                        hire R650</span>
+                                                </label>
+                                            </div>
+                                            <div id="car-hire-south" class="mt-3 hidden">
+                                                <label class="inline-flex items-center cursor-pointer">
+                                                    <input id="car-hire-checkbox-south" type="checkbox" value="R750"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                                    </div>
+                                                    <span
+                                                        class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car
+                                                        hire R750</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative max-w-sm">
+                                        <div
+                                            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                            </svg>
+                                        </div>
+                                        <input datepicker datepicker-format="mm/dd/yyyy" type="text"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Select date">
+                                    </div>
+                                    <button type="submit"
+                                        class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center relative">
+                                        <span class="spinner hidden absolute inset-0 flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-white animate-spin"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                                    stroke-width="4"></circle>
+                                                <path class="opacity-75" fill="currentColor"
+                                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="button-text">Submit</span>
+                                    </button>
                                 </form>
-                                <div id="car-hire-north" class="mt-3 hidden">
-                                    <label class="inline-flex items-center cursor-pointer">
-                                        <input id="car-hire-checkbox-north" type="checkbox" value="R650"
-                                            class="sr-only peer">
-                                        <div
-                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                                        </div>
-                                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car hire
-                                            R650</span>
-                                    </label>
-                                </div>
-                                <div id="car-hire-south" class="mt-3 hidden">
-                                    <label class="inline-flex items-center cursor-pointer">
-                                        <input id="car-hire-checkbox-south" type="checkbox" value="R750"
-                                            class="sr-only peer">
-                                        <div
-                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                                        </div>
-                                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Car hire
-                                            R750</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="relative max-w-sm mb-3">
-                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                    </svg>
-                                </div>
-                                <input datepicker datepicker-format="mm/dd/yyyy" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date">
-                            </div>
-                            <button type="submit" id="submit-btn"
-                                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-                                Submit
-                            </button>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-          <!-- Alert for correct submission -->
-    <div id="correct"
-    class="px-10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 alert success p-4 mb-4 border h-auto w-96 rounded-lg bg-gray-800 text-green-400 border-green-800"
-    role="alert">
-    <div class="flex items-center">
-      <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor" viewBox="0 0 20 20">
-        <path
-          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-      </svg>
-      <span class="sr-only">Info</span>
-      <h3 class="text-lg font-medium">This is a success alert</h3>
-    </div>
-    <div class="mt-2 mb-4 text-sm">
-      Message was sent successfully </div>
-    <div class="flex">
-      </button>
-      <button type="button"
-        class="close-btn text-green-800 bg-transparent border border-green-800 hover:bg-green-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-green-600 dark:border-green-600 dark:text-green-400 dark:hover:text-white dark:focus:ring-green-800"
-        data-dismiss-target="#alert-additional-content-3" aria-label="Close">
-        Dismiss
-      </button>
-    </div>
-  </div>
+        </section>
 
         <!-- google map -->
         <section>
@@ -276,91 +278,6 @@
 
 
     <script>
-       document.getElementById("bookingsform1").addEventListener("submit", function (event) {
-  event.preventDefault();
-  // Your form submission logic here...
-});
-
-document.getElementById("submit-btn").addEventListener("click", function (event) {
-  event.preventDefault();
-  const form = document.getElementById("bookingsform1");
-  const formData = new FormData(form);
-
-  // Collect course option
-  const courseOption = form.querySelector('input[name="course-option"]:checked') ? form.querySelector('input[name="course-option"]:checked').value : null;
-
-  // Collect car hire option
-  const carHireNorth = form.querySelector('#car-hire-checkbox-north').checked;
-  const carHireSouth = form.querySelector('#car-hire-checkbox-south').checked;
-  
-  // Construct data object
-  const data = {
-    fullname: formData.get("fullname"),
-    contact: formData.get("contact"),
-    email: formData.get("email"),
-    address: formData.get("address"),
-    courseOption: courseOption,
-    packageOption: formData.get("package-list"),
-    carHire: {
-      north: carHireNorth,
-      south: carHireSouth
-    },
-    selectedDate: formData.get('selected-date')
-  };
-
-  // Send data to server
-  fetch("https://serverforms.glitch.me/submit-bookingskylas", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-    .then(response => {
-      if (response.ok) {
-        document.getElementById("response").innerText = "Form submitted successfully!";
-      } else {
-        throw new Error("Failed to submit form");
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      document.getElementById("response").innerText = "An error occurred while submitting the form";
-    });
-});
-
-
-
-
-
-        // Alert
-        document.addEventListener('DOMContentLoaded', function () {
-            // Select the contact form
-            const contactForm = document.getElementById('bookingsform1');
-
-            // Add submit event listener
-            contactForm.addEventListener('submit', function (event) {
-                // Prevent the default form submission
-                event.preventDefault();
-
-                // Perform form validation or submission via AJAX to your server
-                // For this example, let's assume the form submission fails
-                const isError = false;
-                const isCorrect = true;
-
-                if (isCorrect) {
-                    // Show the correct alert
-                    const correctAlert = document.getElementById('correct');
-                    correctAlert.classList.remove('hidden'); // Remove the 'hidden' class to display the alert
-                } else if (isError) {
-                    // Show the error alert
-                    const errorAlert = document.getElementById('wrong');
-                    errorAlert.classList.remove('hidden');
-                }
-            });
-        });
-
-
         // cousrse selection
         document.addEventListener("DOMContentLoaded", function () {
             const packageList = document.getElementById("package-list");
@@ -409,6 +326,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
     <script src="./js/flowbite/datepicker.js"></script>
     <script type="text/javascript" src="./js/universal.js"></script>
     <script type="text/javascript" src="./js/tw-elements/tw-elements.umd.min.js"></script>
+    <script type="text/javascript" src="./js/submitform/index.js"></script>
 
 </body>
 

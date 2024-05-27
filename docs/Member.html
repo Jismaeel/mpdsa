@@ -192,10 +192,10 @@
                 <select id="area" name="area"
                   class="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
                   <option selected>Choose an area</option>
-                  <option >Strandfontein</option>
-                  <option >Eastridge</option>
-                  <option >Bayview</option>
-                  <option >Beacon Valley</option>
+                  <option>Strandfontein</option>
+                  <option>Eastridge</option>
+                  <option>Bayview</option>
+                  <option>Beacon Valley</option>
                 </select>
               </div>
               <div class="flex items-start">
@@ -210,37 +210,25 @@
                 </div>
               </div>
               <button type="submit"
-                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Submit</button>
+                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center relative">
+                <span class="spinner hidden absolute inset-0 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="button-text">Submit</span>
+              </button>
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Alert for correct submission -->
-    <div id="correct"
-      class="px-10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 alert success p-4 mb-4 border h-auto w-96 rounded-lg bg-gray-800 text-green-400 border-green-800"
-      role="alert">
-      <div class="flex items-center">
-        <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" viewBox="0 0 20 20">
-          <path
-            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-        </svg>
-        <span class="sr-only">Info</span>
-        <h3 class="text-lg font-medium">This is a success alert</h3>
-      </div>
-      <div class="mt-2 mb-4 text-sm">
-        Message was sent successfully </div>
-      <div class="flex">
-        </button>
-        <button type="button"
-          class="close-btn text-green-800 bg-transparent border border-green-800 hover:bg-green-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-green-600 dark:border-green-600 dark:text-green-400 dark:hover:text-white dark:focus:ring-green-800"
-          data-dismiss-target="#alert-additional-content-3" aria-label="Close">
-          Dismiss
-        </button>
-      </div>
-    </div>
+    <div id="response"></div>
 
 
     <!-- google map -->
@@ -292,10 +280,11 @@
     </footer>
   </div>
 
-  <script src="./js/membership/membershipform.js"></script>
+
   <script src="./js/flowbite/flowbite.min.js"></script>
   <script type="text/javascript" src="./js/universal.js"></script>
   <script type="text/javascript" src="./js/tw-elements/tw-elements.umd.min.js"></script>
+  <script type="text/javascript" src="./js/submitform/index.js"></script>
 
 
 
