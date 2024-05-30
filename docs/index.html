@@ -97,7 +97,8 @@
             </a>
           </li>
           <li>
-            <a href="#DrivingSchools"
+            <a type="button" id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500"
+              data-dropdown-trigger="hover"
               class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-black group">
               <svg class="w-6 h-6 text-white group-hover:text-gray-900" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -106,7 +107,39 @@
                   clip-rule="evenodd" />
               </svg>
               <span class="flex-1 ms-3 whitespace-nowrap">Driving Schools</span>
+              <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
             </a>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownDelay"
+              class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-56 bg-gray-700">
+              <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownDelayButton">
+                <li>
+                  <a href="./Skylas Driving School.html"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Skylas Driving School</a>
+                </li>
+                <li>
+                  <a href="./Qs Driving School.html"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Q's Driving Schools</a>
+                </li>
+                <li>
+                  <a href="./Two lilies Driving School.html"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Two Lillies Driving Schools</a>
+                </li>
+                <li>
+                  <a href="./Eddies Driving School.html"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Eddies Driving School</a>
+                </li>
+                <li>
+                  <a href="./Craigs Driving School.html"
+                    class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Craigs Driving School</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="./Member.html"
@@ -394,7 +427,7 @@
         <h2 id="DrivingSchools" class="pt-6 text-3xl font-bold text-black text-center">
           Driving Schools
         </h2>
-        <div class="grid grid-row lg:grid-cols-3 mb-12 p-6 gap-6 container mx-auto items-center justify-center">
+        <div class="grid grid-row lg:grid-cols-3 mb-12 p-6 gap-6 container mx-auto items-center justify-between">
           <!-- Card -->
           <div class="block rounded-lg bg-white shadow-xl text-left">
 
@@ -418,7 +451,7 @@
 
               <!-- Button -->
               <a href="./Skylas Driving School.html"
-                class="pointer-events-none text-white  bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                class=" text-white  bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                 Book now
               </a>
 
@@ -525,37 +558,6 @@
           </div>
           <!-- Card -->
 
-          <!-- Card -->
-          <div class="block rounded-lg bg-white shadow-xl text-left">
-
-            <!-- Card image -->
-            <a href="#!">
-              <img class="rounded-t-lg" src="./img/ebaneezar ds.png" alt="" />
-            </a>
-
-            <!-- Card body -->
-            <div class="p-6">
-
-              <!-- Title -->
-              <h2 class="mb-2 text-xl font-bold tracking-wide text-black">
-                Ebenezer Drivivg School
-              </h2>
-
-              <!-- Text -->
-              <p class="mb-4 text-base text-black">
-                Get to know this Driving School
-
-              </p>
-
-              <!-- Button -->
-              <a href="./Ebenezar Driving School.html"
-                class="pointer-events-none text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none  focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-                Book now
-              </a>
-
-            </div>
-
-          </div>
           <!-- Card -->
 
           <!-- Card -->
@@ -748,7 +750,7 @@
                 class="flex items-center justify-center space-x-3 mt-4 text-xs md:text-sm lg:text-base xl:text-lg">
                 <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">
                   <cite class="pe-3 font-medium text-gray-900">Justin Adams</cite>
-                  <cite class="ps-3 text-xs md:text-sm text-gray-500">Went with Ebenezar Driving Schools</cite>
+                  <cite class="ps-3 text-xs md:text-sm text-gray-500">Went with Craigs Driving Schools</cite>
                 </div>
               </figcaption>
             </figure>
@@ -850,7 +852,8 @@
                     <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required
                       class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white">
-                    <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never share your details.
+                    <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never
+                      share your details.
                       Read our <a href="#" class="font-medium hover:underline text-red-500">Privacy Policy</a>.</p>
                   </div>
                   <div class="mb-4">
@@ -862,8 +865,10 @@
                     <button type="submit"
                       class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center relative">
                       <span class="spinner hidden absolute inset-0 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <svg class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+                          viewBox="0 0 24 24">
+                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                          </circle>
                           <path class="opacity-75" fill="currentColor"
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
                           </path>
@@ -872,7 +877,7 @@
                       <span class="button-text">Submit</span>
                     </button>
                   </div>
-                </form> 
+                </form>
               </div>
             </div>
           </div>

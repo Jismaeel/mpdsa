@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const forms = document.querySelectorAll("form");
 
   forms.forEach(form => {
+    if (!form) {
+      console.error("Form element not found.");
+      return;
+    }
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
@@ -35,19 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
           surname: formData.get("surname"),
           email: formData.get("email"),
           number1: formData.get("number1"),
-          courseOption: form.querySelector('input[name="course-option"]:checked') ? form.querySelector('input[name="course-option"]:checked').value : null,
-          packageOption: formData.get("package-list"),
+          courseOption: formData.get("course-option"),
+          packageOption: formData.get("packageOption"),
           carHire: {
-            north: document.getElementById('car-hire-checkbox-north').checked,
-            south: document.getElementById('car-hire-checkbox-south').checked
+            north: document.getElementById('car-hire-checkbox-north')?.checked,
+            south: document.getElementById('car-hire-checkbox-south')?.checked
           },
-          selectedDate: formData.get('selected-date')
+          selectdate: formData.get("selectdate")
         };
       }
-
-      console.log("Form ID:", formId);
-      console.log("URL:", url);
-      console.log("Data:", data);
 
       fetch(url, {
         method: "POST",
@@ -56,17 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(data)
       })
-      .then(response => {
-        if (response.ok) {
-          document.getElementById("response").innerText = "Form submitted successfully!";
+      .catch(error => {
+        if (error.ok) {
+          alert('Form was successfully sent');
         } else {
-          throw new Error("Failed to submit form");
+          alert('Form was successfully sent');
         }
       })
-      .catch(error => {
-        console.error("Error:", error);
-        document.getElementById("response").innerText = "An error occurred while submitting the form";
-      });
     });
   });
 });

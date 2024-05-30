@@ -35,41 +35,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-
-
-
-// Show the alert and hide it after 3 seconds
-function showAlert(alertId) {
-    // Get the alert element by its ID
-    let alert = document.getElementById(alertId);
-    
-    // Remove the 'hidden' class to display the alert
-    alert.classList.remove('hidden');
-    
-    // Set a timer to add the 'hidden' class back after 3 seconds
-    setTimeout(function() {
-        alert.classList.add('hidden');
-    }, 1000); // 1000 milliseconds = 3 seconds
-    
-    // Add event listener to the close button
-    let closeBtn = alert.querySelector('.close-btn');
-    closeBtn.addEventListener('click', function() {
-        alert.classList.add('hidden');
-    });
-}
-
-// Example usage:
-// Replace 'correct' with 'wrong' if you want to show the incorrect submission alert
-showAlert('correct');
-
-
-
-  
-  
-  
-  
-
-
 // search bar 
 const searchInput = document.getElementById('searchInput');
 const clearButton = document.getElementById('clearButton');
